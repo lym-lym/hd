@@ -1,0 +1,19 @@
+*{font-family:Arial, Verdana, Microsoft YaHei, "宋体";}
+body,p,ul,li,ol,dl,dd,dt,table,tr,td,th,form,h1,h2,h3,h4,h5,h6,img,input,fieldset,legend{margin: 0;padding:0; }
+/*html,body{overflow-x: hidden;}*/
+img{border: none;} /*因为在ie低版本中给图片加a链接会有边框*/
+ol,ul,li{list-style: none;}
+table {border-collapse: collapse;/*表格边框为1条边*/border-spacing: 0;/*相邻单元格的边框间的距离*/}
+a{text-decoration: none;}
+i{font-style: normal;/*去掉i标签的斜体*/}
+h1,h2,h3,h4,h5,h6{font-weight: normal;color: #fff;}
+textarea{resize: none;/*禁止多行文本框拉伸*/overflow: hidden;}
+strong{font-weight: normal;}
+iframe{border: none;}
+ 
+.clear{ clear: both;height: 0;overflow: hidden;}/*加上overflow: hidden是为了兼容ie6 ie6不识别高度小于0*/
+/*清除浮动*/
+
+.claerfloat{zoom: 1;
+    &:after{display: block;clear: both;content: "";visibility: hidden;height: 0;/*解决IE6下有高度的问题*/}
+}
