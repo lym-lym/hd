@@ -3,8 +3,7 @@
 $(function(){
 	
 	$("#banner").slide({titCell:".hd li",mainCell:".bd ul",effect:"fold",autoPlay:true,delayTime:800,interTime:6000,mouseOverStop:false});/** autoPlay:true自动播放*/
-	
-	
+	$("#new").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",interTime:50,vis:5,pnLoop:false,trigger:"click"});
 	//搜索框
 	$("#text").focus(function(){
 		$(this).attr('placeholder'," ").css('width','175px');
