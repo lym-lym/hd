@@ -1,18 +1,12 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
-		<meta charset="utf-8" />
-		<title>红豆首页</title>
-		<!-- Compatible files -->
-		<!--[if lt IE 9]>
-        <script src="js/m_ijr.js"></script>
-		<![endif]-->
-		<link rel="stylesheet" type="text/css" href="css/m_reset.css" />
-		<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
-		<link rel="stylesheet" type="text/css" href="css/m_web.css" />
-		
-		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<meta charset="UTF-8">
+		<title>我的购物车</title>
+		<link rel="stylesheet" type="text/css" href="../css/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/m_reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/m_web.css"/>
+		<script src="../js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
 		<!--头部-->
@@ -22,7 +16,7 @@
 					<div class="l">
 						<a href="javascript:;" class="community">红豆社区</a>/
 						<a href="javascript:;" class="info">招商信息
-							<img src="img/icon-header_top1.png"/>
+							<img src="../img/icon-header_top1.png"/>
 						</a>
 					</div>
 					<div class="r">
@@ -36,7 +30,7 @@
 				</div>
 				<!--logo-->
 				<div class="logo_box">
-					<a href="index.html" class="logo"><img src="img/logo.png"/></a>
+					<a href="index.html" class="logo"><img src="../img/logo.png"/></a>
 					<!--搜索框-->
 					<div class="search_box">
 						<form action="javascript:;" method="post">
@@ -94,116 +88,59 @@
 				</div>
 			</div>
 		</div>
-		<!--banner-->
-		<div id="banner">
-			<div class="bd">
-				<ul>
-					<li>
-						<a href="javascript:void(0)" title="" style="background: url(img/banner1.jpg) center top no-repeat;"> </a>
-					</li>
-					<li>
-						<a href="javascript:void(0)" title="" style="background: url(img/banner2.jpg) center top no-repeat;"> </a>
-					</li>
-					<li>
-						<a href="javascript:void(0)" title="" style="background: url(img/banner3.jpg) center top no-repeat;"> </a>
-					</li>
-				</ul>
-			</div>
-			<div class="hd">
-				<ul>
-					<li>
-						<a href="javascript:void(0)"></a>
-					</li>
-					<li>
-						<a href="javascript:void(0)"></a>
-					</li>
-					<li>
-						<a href="javascript:void(0)"></a>
-					</li>
-					<div class="clear"></div>
-				</ul>
-			</div>
+		<!--主体内容-->
+		<div class="c_main_box container">
+			<ul class="progress claerfloat">
+				<li class="step1">我的购物车</li>
+				<li class="step2">填写核对订单信息</li>
+				<li class="step3">成功提交订单</li>
+			</ul>
+			<form action="javascript:;" method="post" class="claerfloat">
+				<div class="shopname">
+					<input type="checkbox" id="" name="" value="" checked="checked">
+                    <span>店铺名称：红豆男装旗舰店</span>
+                </div>
+                <div class="shopbody">
+                	<table border="0" cellspacing="0" cellpadding="0">
+                		<tr>
+                			<th width="45%">商品信息</th>
+                			<th width="11%">单价</th>
+                			<th width="18%">数量</th>
+                			<th width="15%">金额</th>
+                			<th width="11%">操作</th>
+                		</tr>
+                		<tr class="aut">
+                			<td width="45%" class="d1">
+                				<input type="checkbox" name="" id="" value="" checked="checked"/>
+                				<a href="javascript:;" class="pic"><img src="../img/pic_car1.jpg"/></a>
+                				<h2><a href="javascript:;">DXHTD019S红豆男装男士韩版简约款大衣L</a></h2>
+                				<p>颜色:B4藏青 尺码:165/84A</p>
+                			</td>
+                			<td width="11%" class="d2">
+                				<p>￥100</p>
+                				<del>797.00</del>
+                			</td>
+                			<td width="18%" class="d3">
+                				<div class="count claerfloat">
+                					<a href="javascript:;" class="reduce">-</a>
+                					<span class="number"></span>
+                					<a href="javascript:;" class="add">+</a>
+                				</div>
+                			</td>
+                			<td width="15%" class="d4">￥100</td>
+                			<td width="11%" class="d5">
+                				<a href="javascript">收藏</a>
+                				<a href="javascript">删除</a>
+                			</td>
+                		</tr>
+                	</table>
+                </div>
+                <div class="todal_box">
+                	商品总价（不含运费）<span class="todal">￥5611</span>
+                </div>
+				<a href="javascript:;" class="pay">去结算</a>
+			</form>
 		</div>
-		<div class="clear"></div>
-		<div class="banner_down container">
-			<img src="img/pic_banner_b.jpg"/>
-		</div>
-		<!--主体页面开始-->
-		<div class="main_box container">
-			<div class="f1">
-				<div class="title">
-					<img src="img/pic_f1_title.png"/>
-				</div>
-				<div class="contant">
-					<ul class="claerfloat">
-						<li><a href="javascript:;"><h1>单西</h1>——<p>single west</p>
-							<div class="mask"></div>
-								<i class="i1"></i>
-								<i class="i2"></i>
-								<i class="i3"></i>
-								<i class="i4"></i>
-							</a>
-						</li>
-						<li><a href="javascript:;"><h1>呢大衣</h1>——<p>woollen coat</p>
-							<div class="mask"></div>
-								<i class="i1"></i>
-								<i class="i2"></i>
-								<i class="i3"></i>
-								<i class="i4"></i>
-							</a>
-						</li>
-						<li><a href="javascript:;"><h1>羽绒服</h1>——<p>wel clothing</p>
-							<div class="mask"></div>
-								<i class="i1"></i>
-								<i class="i2"></i>
-								<i class="i3"></i>
-								<i class="i4"></i>
-							</a>
-						</li>
-						<li><a href="javascript:;"><h1>卫衣</h1>——<p>shirt</p>
-							<div class="mask"></div>
-								<i class="i1"></i>
-								<i class="i2"></i>
-								<i class="i3"></i>
-								<i class="i4"></i>
-							</a>
-						</li>
-						<li><a href="javascript:;"><h1>衬衫</h1>——<p>single west</p>
-							<div class="mask"></div>
-								<i class="i1"></i>
-								<i class="i2"></i>
-								<i class="i3"></i>
-								<i class="i4"></i>
-							</a>
-						</li>
-						<li class="last"><a href="javascript:;"><h1>线衫</h1>——<p>single west</p>
-							<div class="mask"></div>
-								<i class="i1"></i>
-								<i class="i2"></i>
-								<i class="i3"></i>
-								<i class="i4"></i>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="f2" id="new">
-				<div class="title">
-					<img src="img/pic_f2_title.png"/>
-					<a href="javascript:;">查看更多 ></a>
-				</div>
-				<div class="container bd">
-					<ul class="claerfloat">
-						<li><a href="javascript:;"><img src="img/pic_f2_c1.png"/></a></li>
-						<li><a href="javascript:;"><img src="img/pic_f2_c2.png"/></a></li>
-						<li><a href="javascript:;"><img src="img/pic_f2_c3.png"/></a></li>
-						<li><a href="javascript:;"><img src="img/pic_f2_c4.png"/></a></li>
-						<li><a href="javascript:;"><img src="img/pic_f2_c5.png"/></a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		
 		<!--底部-->
 		<div class="footer container">
 			<div class="foot_nav">
@@ -256,22 +193,22 @@
 				</div>
 			</div>
 			<div class="foot_logo">
-				<img src="img/food_logo.jpg"/>
+				<img src="../img/food_logo.jpg"/>
 			</div>
 			<div class="coypright">
 				<a href="javascript:;" class="a">苏公网安备 32020502000418号&nbsp;</a>
 				<a href="javascript:;">苏ICP备14039882号-4&nbsp;&nbsp;&nbsp;|</a>
 				<a href="javascript:;">&nbsp;苏B1-20150021</a>
-				<img src="img/pic_foot_ebsIcon.png"/>
+				<img src="../img/pic_foot_ebsIcon.png"/>
 				<p>无锡红豆网络科技有限公司</p>
 			</div>
 		</div>
 		<div class="flex_r">
 			<a href="javascript:;" class="car"><i class="iconfont icon-gouwuche1"></i>购物车</a>
-			<a href="javascript:;" class="tel">洽谈通<img src="img/icon_foot_tel.gif"/> </a>
+			<a href="javascript:;" class="tel">洽谈通<img src="../img/icon_foot_tel.gif"/> </a>
 			<a href="#header" class="back_top"><i class="iconfont icon-fanhuidingbu"></i>返回顶部</a>
 		</div>
-		<script src="js/m_reset.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript" src="js/m_web.js"></script>
+		<script src="../js/m_reset.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="../js/m_web.js" ></script>
 	</body>
 </html>
