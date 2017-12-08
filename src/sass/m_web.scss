@@ -219,7 +219,7 @@ $color:#e60012;
 }
 //购物车页面
 .c_main_box{margin-top: 20px;
-    .progress{padding-top: 24px;width: 681px;background: url(../img/bg_progress.png) no-repeat 0 0;margin: 0 auto;
+    .progress{padding-top: 24px;width: 681px;background: url(../img/bg_progress.png) no-repeat 0 0;margin: 20px auto;
         li{float: left;font-size: 14px;height: 24px;line-height: 24px;text-align: center;width: 227px;color: #ababab;}
     }
     form{
@@ -248,7 +248,7 @@ $color:#e60012;
                         .count{width: 130px;margin: 0 auto;
                             a{display: block;color: #666;width: 28px;height: 28px;border: 1px solid #dfdfdf;line-height: 28px;text-align: center;}
                             .reduce{float: left;}
-                            .number{display: block;height: 28px;width: 70px; float: left;border-bottom: 1px solid #dfdfdf;border-top: 1px solid #dfdfdf;background: #fff;}
+                            .number{border:none; height: 28px;width: 70px; float: left;border-bottom: 1px solid #dfdfdf;border-top: 1px solid #dfdfdf;background: #fff;text-align: center;}
                             .add{float: right;}
                         }
                     }
@@ -265,5 +265,129 @@ $color:#e60012;
             .todal{font-size: 18px;color: #000;}
         }
         .pay{margin-top: 15px; float: right; background: #231815;display: block;width: 120px;height: 34px;color: #fff;cursor: pointer;text-align: center;line-height: 34px;}
+    }
+}
+//生成订单页面
+.o_main_box{
+    .progress{padding-top: 24px;width: 681px;background: url(../img/bg_progress.png) no-repeat 0 -50px;margin: 20px auto;
+        li{float: left;font-size: 14px;height: 24px;line-height: 24px;text-align: center;width: 227px;color: #ababab;}
+    }
+    .address_box{border: 1px solid #dfdfdf;
+        h3{font-size: 14px;line-height: 40px;height: 40px;border-bottom: 1px solid #dfdfdf;padding-left: 20px;}
+        .address{padding: 20px;
+            .d1{position: relative; float: left;width: 270px;height: 165px;cursor: pointer;
+            background: url(../img/bg_order1.png) -10px 0 repeat-x;border-left: 2px solid #dfdfdf;border-right: 2px solid #dfdfdf;
+                p{padding-left: 20px; position: relative; margin: 0 10px;line-height: 45px;color: #333; height: 45px;border-bottom: 1px dashed #dfdfdf;font-size: 12px;
+                    span{position: absolute;left: 0;top: 14px; display: inline-block; width: 16px;height: 16px;background: url(../img/bg_progress.png) no-repeat;}
+                }
+                .tel{span{background-position: -72px -132px;}}
+                .place{span{background-position: -94px -132px;}}
+                .date{border: 0; span{background-position: -114px -132px;}}
+                .modify{display: none; position: absolute;bottom: 20px;right: 19px;background: #f0f0f0;border: 1px solid #dfdfdf;
+                        color: #333;font-size: 12px;height: 20px;line-height: 20px;cursor: pointer;padding: 0 4px;}
+                i{position: absolute;right: -1px;bottom: 0; display: block;width: 38px;height: 38px;background: url(../img/bg_progress.png) no-repeat -120px -150px;}
+            }
+            .d2{float: left;width: 270px;height: 165px; cursor: pointer;margin-left: 20px;border: 1px solid #dfdfdf;text-align: center;
+                p{margin-top: 10px;color: #666;font-size: 14px;}
+                i{margin: 0 auto;margin-top: 55px; width: 28px;height: 28px; display: block;background: url(../img/bg_progress.png) -57px -156px no-repeat ;}
+            }
+        }
+    }
+    .goods_info{margin-top: 20px;border: 1px solid #dfdfdf;
+        .title{background-color: #f5f5f5;height: 38px;line-height: 38px;font-size: 12px;
+           li{float: left;} 
+           .list_con{font-weight: bold;font-size: 14px;text-indent: 20px;}
+        }
+        .list_con{width: 50%;}
+        .list_price{width: 20%;text-align: center;}
+        .list_amount{width: 10%;text-align: center;}
+        .list_sum{width: 20%;text-align: center;}
+        .order_content{padding: 20px 0;
+            li{float: left;} 
+            .list_con{
+                img{width: 55px;height: 80px;float: left;margin-left: 20px;}
+                .text{float: left;padding-left: 10px; }
+                h3{width: 224px; color: #333;height: 32px;line-height: 16px;font-size: 12px;}
+                .cartProColor{color: #666;font-size: 12px;}
+            }
+            .list_price{
+                p{color: #333;font-size: 14px;font-weight: bold;}
+                del{color: #666;font-size: 12px;}
+            }
+            .list_amount{
+                p{color: #666;font-size: 12px;}
+            }
+            .list_sum{
+                 p{color: #333;font-size: 14px;font-weight: bold;}
+            }
+        }
+        .orderForm{background: #f5f5f5;padding: 20px;border-top: 1px solid #dfdfdf;
+            h4{width: 100px;text-align: right;float: left;font-size: 14px;color: #666;line-height: 24px;}
+            .invoice{
+                input{display: inline-block;vertical-align: middle;margin-left: 15px;outline: none;}
+                input[type="text"]{border: 1px solid #dfdfdf;height: 22px;width: 200px;padding: 0 5px;}
+                span{font-size: 14px;color: #666;margin-left: 10px;}
+                i{font-size: 12px;color: #666;margin-left: 5px;}
+            }
+            .distribution{margin-top: 20px;
+                input{margin-left: 10px;vertical-align: middle;}
+                i{font-size: 12px;color: #666;margin-left: 5px;}
+                span{font-size: 12px;color: #666;margin-left: 20px;}
+            }
+            .discount{margin-top: 20px;
+                select{height: 25px;margin-left: 10px;}
+                span{color: #666;font-size: 12px;}
+                a{font-size: 12px;}
+            }
+            .message{margin-top: 20px;
+                textarea{border: 1px solid #dfdfdf;height: 50px;line-height: 18px;padding: 5px;width: 380px;margin-left: 10px;}
+            }
+        }
+    }
+    .mony{margin-top: 10px;
+        span{color: #231815;font-size: 18px;font-weight: 400;}
+        p{font-size: 14px;text-align: right; color: #666;line-height: 33px;margin-right: 10px;}
+    }
+    .btn{margin-top: 20px;
+        a{display: block;width: 120px;height: 35px;line-height: 35px;text-align: center;font-size: 14px;}
+        .backCar{border: 1px solid #dfdfdf;color: #333;background: #F5F5F5;float: left;}
+        .submitOrder{float: right;border: 1px solid #231815;color: #fff;background: #231815;}
+    }
+}
+//收货信息弹窗de背景
+.receiptInfo_bg{position: fixed;top: 0;left: 0;width: 100%;height: 100%;z-index: 98;background: rgba(0, 0, 0, .6);display: none;}
+//收货信息弹窗
+.receiptInfo{position: fixed;top: 50%;left: 50%;width: 240px;margin-top: -140px;margin-left: -175px;display: none;
+    border: 6px solid #a6a6a6;z-index: 99;background: #fff;padding: 25px;
+    form{overflow: hidden;
+        h1{color: #333;font-size: 14px;line-height: 14px;margin-bottom: 16px;font-weight: bold;
+            span{float: right;cursor: pointer;}
+        }
+        strong{height: 15px;font-size: 12px;color: #ff873e;display: block;padding-left: 5px;}
+        input{padding-left: 10px; outline: none;width: 220px;height: 20px;border: 1px solid #DFDFDF;margin-top: 5px;background: #fff;}
+        ::-webkit-input-placeholder {color: #b0b0b1;font-size: 12px;}
+        ::-moz-placeholder {color: #b0b0b1;font-size: 12px;}
+        　          :-ms-input-placeholder{color: #b0b0b1;font-size: 12px;}
+        select{outline: none;border: 1px solid #DFDFDF;color: #52A0E5;margin-bottom: 18px;width: 100px;}
+        #cmbProvince{}
+        #cmbCity{float: right;margin-right: 10px;}
+        #cmbArea{}
+        textarea{height: 45px;outline: none;border: 1px solid #DFDFDF;width: 230px;box-sizing: border-box;padding-left: 10px;}
+        a{width: 100px;height: 30px;text-align: center;line-height: 30px;font-size: 12px;display: inline-block;margin-top: 20px;}
+        .save{background: #231815;color: #fff;border: 1px solid #231815;margin-right: 26px;}
+        .cancel{background: #fff;color: #231815;border: 1px solid #d9d9d9;}
+    }
+}
+//订单页面
+.order_main_box{margin-top: 20px;
+    .mytitle{color: #555;font-size: 14px;
+        a{color: #555;font-size: 14px;
+            &:hover{color: $color;}
+        }
+    }
+    .contant{
+        .sideLeft{float: left;border: 1px solid #dfdfdf;padding: 10px;width: 178px;margin-top: 30px;
+            
+        }
     }
 }

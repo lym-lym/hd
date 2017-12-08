@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我的购物车</title>
+		<link rel="stylesheet" type="text/css" href="../css/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/m_reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/m_web.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/cars.css"/>
+		<link rel="shortcut icon" href="../favicon.ico" />
+		<script src="../js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<!--头部-->
+		<div class="header" id="header">
+			<div class="container">
+				<div class="top_bar claerfloat">
+					<div class="l">
+						<a href="javascript:;" class="community">红豆社区</a>/
+						<a href="javascript:;" class="info">招商信息
+							<img src="../img/icon-header_top1.png"/>
+						</a>
+					</div>
+					<div class="r">
+						<a href="javascript:;" class="vip">会员中心</a>
+						<a href="javascript:;" class="car">0
+							<i class="iconfont icon-cart"></i>
+						</a>
+						<a href="login.html" class="login">登录</a>/
+						<a href="register.html" class="reg">注册</a>
+					</div>
+				</div>
+				<!--logo-->
+				<div class="logo_box">
+					<a href="index.html" class="logo"><img src="../img/logo.png"/></a>
+					<!--搜索框-->
+					<div class="search_box">
+						<form action="javascript:;" method="post">
+							<input type="text" name="" id="text" value="" placeholder="搜索"/>
+							<input type="submit" value=""/>
+						</form>
+					</div>
+				</div>
+				<!--nav-->
+				<div class="nav_box container">
+					<ul class="nav claerfloat">
+						<li><a href="index.html">首页</a></li>
+						<li><a href="javascript:;">所有商品</a></li>
+						<li><a href="javascript:;">羽绒服</a>
+							<dl>
+								<i></i>
+								<dt>羽绒服</dt>
+								<dd><a href="javascript:;">羽绒服</a></dd>
+							</dl>
+						</li>
+						<li><a href="javascript:;">呢大衣</a>
+							<dl>
+								<i></i>
+								<dt>呢大衣</dt>
+								<dd><a href="javascript:;">呢大衣</a></dd>
+							</dl>
+						</li>
+						<li><a href="javascript:;">卫衣</a>
+							<dl>
+								<i></i>
+								<dt>卫衣</dt>
+								<dd><a href="javascript:;">卫衣</a></dd>
+							</dl>
+						</li>
+						<li><a href="javascript:;">夹克</a>
+							<dl>
+								<i></i>
+								<dt>夹克</dt>
+								<dd><a href="javascript:;">商务立领</a></dd>
+								<dd><a href="javascript:;">时尚休闲</a></dd>
+							</dl>
+						</li>
+						<li><a href="javascript:;">针织衫</a>
+							<dl>
+								<i></i>
+								<dt>针织衫</dt>
+								<dd><a href="javascript:;">羊毛衫</a></dd>
+								<dd><a href="javascript:;">针织衫</a></dd>
+								<dd><a href="javascript:;">多色百搭</a></dd>
+								<dd><a href="javascript:;">条纹/格纹</a></dd>
+							</dl>
+						</li>
+						<li><a href="javascript:;">购买指南</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--主体内容-->
+		<div class="c_main_box container">
+			<ul class="progress claerfloat">
+				<li class="step1">我的购物车</li>
+				<li class="step2">填写核对订单信息</li>
+				<li class="step3">成功提交订单</li>
+			</ul>
+			<section class="cartMain">
+				<div class="cartMain_hd">
+					<ul class="order_lists cartTop claerfloat">
+						<li class="list_chk">
+							<!--所有商品全选-->
+							<input type="checkbox" id="all" class="whole_check">
+							全选
+						</li>
+						<li class="list_con">商品信息</li>
+						<li class="list_price">单价</li>
+						<li class="list_amount">数量</li>
+						<li class="list_sum">金额</li>
+						<li class="list_op">操作</li>
+					</ul>
+				</div>
+				<div class="cartBox">
+					<div class="shop_info">
+						<div class="all_check">
+							<!--店铺全选-->
+							<input type="checkbox" id="shop_a" class="shopChoice">
+						</div>
+						<div class="shop_name">
+							店铺：<a href="javascript:;">搜猎人艺术生活</a>
+						</div>
+					</div>
+					<div class="order_content">
+						<ul class="order_lists">
+							<li class="list_chk checkboxl">
+								<input type="checkbox" id="checkbox_4" class="son_check">
+							</li>
+							<li class="list_con">
+								<div class="list_img"><a href="javascript:;"><img src="../img/pic_car1.png" alt=""></a></div>
+								<div class="list_text"><a href="javascript:;">夏季男士迷彩无袖T恤圆领潮流韩版修身男装背心青年时尚打底衫男</a></div>
+							</li>
+							<li class="list_price">
+								<p class="price">￥980</p>
+								<del>￥1980</del>
+							</li>
+							<li class="list_amount">
+								<div class="amount_box claerfloat">
+									<a href="javascript:;" class="reduce reSty">-</a>
+									<input type="text" value="1" class="sum">
+									<a href="javascript:;" class="plus">+</a>
+								</div>
+							</li>
+							<li class="list_sum">
+								<p class="sum_price">￥1980</p>
+							</li>
+							<li class="list_op">
+								<p class="del"><a href="javascript:;" class="delBtn">删除</a></p>
+								<p class="sc"><a href="javascript:;" class="sc">收藏</a></p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="cartBox">
+					<div class="shop_info">
+						<div class="all_check">
+							<!--店铺全选-->
+							<input type="checkbox" id="shop_a" class="shopChoice">
+						</div>
+						<div class="shop_name">
+							店铺：<a href="javascript:;">搜猎人艺术生活</a>
+						</div>
+					</div>
+					<div class="order_content">
+						<ul class="order_lists">
+							<li class="list_chk checkboxl">
+								<input type="checkbox" id="checkbox_4" class="son_check">
+							</li>
+							<li class="list_con">
+								<div class="list_img"><a href="javascript:;"><img src="../img/pic_car1.png" alt=""></a></div>
+								<div class="list_text"><a href="javascript:;">夏季男士迷彩无袖T恤圆领潮流韩版修身男装背心青年时尚打底衫男</a></div>
+							</li>
+							<li class="list_price">
+								<p class="price">￥1980</p>
+								<del>￥1980</del>
+							</li>
+							<li class="list_amount">
+								<div class="amount_box claerfloat">
+									<a href="javascript:;" class="reduce reSty">-</a>
+									<input type="text" value="1" class="sum">
+									<a href="javascript:;" class="plus">+</a>
+								</div>
+							</li>
+							<li class="list_sum">
+								<p class="sum_price">￥1980</p>
+							</li>
+							<li class="list_op">
+								<p class="del"><a href="javascript:;" class="delBtn">删除</a></p>
+								<p class="sc"><a href="javascript:;" class="sc">收藏</a></p>
+							</li>
+						</ul>
+						<ul class="order_lists">
+							<li class="list_chk checkboxl">
+								<input type="checkbox" id="checkbox_4" class="son_check">
+							</li>
+							<li class="list_con">
+								<div class="list_img"><a href="javascript:;"><img src="../img/pic_car1.png" alt=""></a></div>
+								<div class="list_text"><a href="javascript:;">夏季男士迷彩无袖T恤圆领潮流韩版修身男装背心青年时尚打底衫男</a></div>
+							</li>
+							<li class="list_price">
+								<p class="price">￥1980</p>
+								<del>￥1980</del>
+							</li>
+							<li class="list_amount">
+								<div class="amount_box claerfloat">
+									<a href="javascript:;" class="reduce reSty">-</a>
+									<input type="text" value="1" class="sum">
+									<a href="javascript:;" class="plus">+</a>
+								</div>
+							</li>
+							<li class="list_sum">
+								<p class="sum_price">￥1980</p>
+							</li>
+							<li class="list_op">
+								<p class="del"><a href="javascript:;" class="delBtn">删除</a></p>
+								<p class="sc"><a href="javascript:;" class="sc">收藏</a></p>
+							</li>
+						</ul>
+					</div>
+				</div>	
+				<!--底部-->
+				<div class="bar-wrapper">
+					<div class="bar-right">
+						<div class="totalMoney">共计: <strong class="total_text">0.00</strong></div>
+						<div class="piece">已选商品<strong class="piece_num">0</strong>件</div>
+						<div class="clear"></div>
+						<div class="calBtn claerfloat"><a href="makeorder.html">结算</a></div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<!--删除-->
+		<section class="model_bg"></section>
+		<section class="my_model">
+			<p class="title">删除宝贝<span class="closeModel"></span></p>
+			<p>您确认要删除该宝贝吗？</p>
+			<div class="opBtn"><a href="javascript:;" class="dialog-sure">确定</a><a href="javascript:;" class="dialog-close">关闭</a></div>
+		</section>
+		<!--底部-->
+		<div class="footer container">
+			<div class="foot_nav">
+				<ul class="claerfloat">
+					<li><a href="index.html">首页</a></li>
+					<li><a href="javascript:;">所有商品</a></li>
+					<li><a href="javascript:;">羽绒服</a></li>
+					<li><a href="javascript:;">呢大衣</a></li>
+					<li><a href="javascript:;">卫衣</a></li>
+					<li><a href="javascript:;">夹克</a></li>
+					<li><a href="javascript:;">针织衫/羊毛衫</a></li>
+					<li><a href="javascript:;">购买指南</a></li>
+				</ul>
+			</div>
+			<div class="foot_list claerfloat">
+				<div class="left claerfloat">
+					<dl>
+						<dt>支付说明</dt>
+						<dd><a href="javascript:;">优惠券使用方法</a></dd>
+						<dd><a href="javascript:;">常见支付问题</a></dd>
+						<dd><a href="javascript:;">支付方式</a></dd>
+						<dd><a href="javascript:;">预存款支付</a></dd>
+					</dl>
+					<dl>
+						<dt>配送服务</dt>
+						<dd><a href="javascript:;">常见配送问题</a></dd>
+						<dd><a href="javascript:;">配送范围</a></dd>
+						<dd><a href="javascript:;">运送方式/运费说明</a></dd>
+						<dd><a href="javascript:;">商品验货与签收</a></dd>
+					</dl>
+					<dl>
+						<dt>售后服务</dt>
+						<dd><a href="javascript:;">退款说明</a></dd>
+						<dd><a href="javascript:;">办理退换货</a></dd>
+						<dd><a href="javascript:;">退换货政策</a></dd>
+						<dd><a href="javascript:;">放心消费</a></dd>
+					</dl>
+					<dl>
+						<dt>关于我们</dt>
+						<dd><a href="javascript:;">了解我们</a></dd>
+						<dd><a href="javascript:;">联系我们</a></dd>
+						<dd><a href="javascript:;">招聘英才</a></dd>
+					</dl>
+				</div>
+				<div class="right">
+					<h3>服务热线（8:30~22:00）</h3>
+					<p>0510-66868228</p>
+					<h3>服务邮箱</h3>
+					<p>service@hodo.cn</p>
+				</div>
+			</div>
+			<div class="foot_logo">
+				<img src="../img/food_logo.jpg"/>
+			</div>
+			<div class="coypright">
+				<a href="javascript:;" class="a">苏公网安备 32020502000418号&nbsp;</a>
+				<a href="javascript:;">苏ICP备14039882号-4&nbsp;&nbsp;&nbsp;|</a>
+				<a href="javascript:;">&nbsp;苏B1-20150021</a>
+				<img src="../img/pic_foot_ebsIcon.png"/>
+				<p>无锡红豆网络科技有限公司</p>
+			</div>
+		</div>
+		<div class="flex_r">
+			<a href="javascript:;" class="car"><i class="iconfont icon-gouwuche1"></i>购物车</a>
+			<a href="javascript:;" class="tel">洽谈通<img src="../img/icon_foot_tel.gif"/> </a>
+			<a href="#header" class="back_top"><i class="iconfont icon-fanhuidingbu"></i>返回顶部</a>
+		</div>
+		<script src="../js/carts.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/m_reset.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="../js/m_web.js" ></script>
+	</body>
+</html>

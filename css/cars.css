@@ -1,0 +1,374 @@
+a {
+	color: #000;
+}
+
+.cartMain {
+	font-size: 14px;
+	position: relative;
+	margin-top: 55px;
+}
+
+
+/*购物车头部*/
+
+.cartMain_hd {
+	width: 100%;
+	line-height: 30px;
+	color: #3c3c3c;
+}
+
+.cartMain_hd .cartTop {
+	height: 30px;
+}
+
+.cartMain_hd .cartTop li {
+	float: left;
+}
+
+.cartMain_hd .cartTop .list_chk {
+	width: 80px;
+}
+
+.cartMain_hd .cartTop .list_con {
+	width: 298px;
+}
+
+.cartMain_hd .cartTop .list_chk label {
+	position: absolute;
+	left: 10px;
+	top: 19px;
+	margin: 0;
+}
+
+.cartMain_hd .cartTop .list_con {
+	text-indent: 55px;
+}
+
+.cartBox {
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+.cartBox .shop_info {
+	position: relative;
+	width: 100%;
+	height: 38px;
+	background-color: #fff;
+	line-height: 38px;
+	vertical-align: baseline;
+}
+
+.cartBox .shop_info .all_check {
+	float: left;
+	height: 38px;
+}
+
+.cartBox .shop_info .all_check .shop {
+	position: absolute;
+	top: 13px;
+}
+
+.cartBox .shop_info .shop_name {
+	float: left;
+	font-weight: bold;
+}
+
+
+/*商品列表*/
+
+.cartBox .order_content {
+	border: 1px solid #ccc;
+	background: #fcfcfc;
+}
+
+.cartBox .order_content a {
+	display: block;
+}
+
+.order_content .order_lists .checkboxl {
+	margin-top: 20px;
+	height: 13px;
+	width: 20px;
+	margin-left: 13px;
+}
+
+.order_lists {
+	width: 100%;
+	height: 130px;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+.order_lists:last-child {
+	border-bottom: none;
+	overflow: hidden;
+}
+
+.order_lists li {
+	float: left;
+	height: 100%;
+}
+
+.order_lists .list_chk {
+	position: relative;
+	width: 50px;
+}
+
+.order_lists .list_chk label {
+	margin: 20px 0 0 24px;
+}
+
+.order_lists .list_con {
+	width: 342px;
+}
+
+.order_lists .list_con .list_img {
+	width: 90px;
+	height: 90px;
+	margin-top: 20px;
+	float: left;
+}
+
+.order_lists .list_con .list_img img {
+	width: 100%;
+	vertical-align: top;
+}
+
+.order_lists .list_con .list_text {
+	margin: 20px 0 0 10px;
+	line-height: 18px;
+	width: 200px;
+	float: left;
+}
+
+.order_lists .list_con .list_text a {
+	color: #3c3c3c;
+	font-size: 12px;
+}
+
+.order_lists .list_con .list_text a:hover {
+	color: #ff873e;
+	text-decoration: underline;
+}
+
+.order_lists .list_info {
+	width: 252px;
+	box-sizing: border-box;
+	padding: 20px 0;
+}
+
+.order_lists .list_info p {
+	color: #9c9c9c;
+	line-height: 18px;
+	margin-left: 15px;
+}
+
+.order_lists .list_price {
+	width: 130px;
+}
+
+.order_lists .list_price .price {
+	margin-top: 20px;
+	line-height: 18px;
+	font-family: Verdana, Tahoma, arial;
+	color: #3c3c3c;
+	font-weight: bold;
+}
+
+.order_lists .list_amount {
+	width: 160px;
+}
+
+.order_lists .list_amount .amount_box {
+	margin-top: 20px;
+	width: 130px;
+	height: 25px;
+	position: relative;
+}
+
+.order_lists .list_amount .amount_box input {
+	border: none;
+	height: 28px;
+	width: 70px;
+	float: left;
+	border-bottom: 1px solid #dfdfdf;
+	border-top: 1px solid #dfdfdf;
+	background: #fff;
+	text-align: center;
+}
+
+.order_lists .list_amount .amount_box a {
+	display: block;
+	color: #666;
+	width: 28px;
+	height: 28px;
+	border: 1px solid #dfdfdf;
+	line-height: 28px;
+	text-align: center;
+}
+
+.order_lists .list_amount .amount_box a:hover {
+	background: #dfdfdf;
+}
+
+.order_lists .list_amount .amount_box .reduce {
+	float: left;
+}
+
+.order_lists .list_amount .amount_box .reSty {
+	float: left;
+}
+
+.order_lists .list_amount .amount_box .plus {
+	float: right;
+}
+
+.order_lists .list_sum {
+	width: 140px;
+}
+
+.order_lists .list_sum .sum_price {
+	line-height: 18px;
+	margin-top: 20px;
+	color: #231815;
+	font-weight: bold;
+}
+
+.order_lists .list_op {
+	width: 100px;
+}
+
+.order_lists .list_op p {
+	margin-top: 20px;
+}
+
+.order_lists .list_op p a {
+	color: #666;
+}
+.order_lists .list_op a:hover{
+	color: #ff0000;
+}
+
+/*底部*/
+
+.bar-right {
+	text-align: right;
+}
+
+.piece {
+	font-size: 16px;
+	float: right;
+	margin-right: 20px;
+}
+
+.piece .piece_num {
+	color: #ff0000;
+	font-size: 20px;
+	margin: 0 5px;
+}
+
+.totalMoney {
+	font-size: 16px;
+	float: right;
+}
+
+.totalMoney .total_text {
+	color: #ff0000;
+	font-size: 20px;
+	margin: 0 5px;
+}
+
+.calBtn a {
+	background: #231815;
+	font-size: 16px;
+	float: right;
+	margin-top: 20px;
+	display: block;
+	width: 120px;
+	height: 34px;
+	color: #fff;
+	cursor: pointer;
+	text-align: center;
+	line-height: 34px;
+}
+
+
+/*自己定义的模态框*/
+
+.model_bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .6);
+	z-index: 999;
+	display: none;
+}
+
+.my_model {
+	position: fixed;
+	display: none;
+	top: 50%;
+	left: 50%;
+	margin-top: -50px;
+	margin-left: -200px;
+	z-index: 9999;
+	width: 360px;
+	height: 120px;
+	border: 1px solid #aeaeae;
+	border-radius: 3px;
+	padding: 20px;
+	background: #fff;
+}
+
+.my_model .title {
+	font-size: 14px;
+	color: #3c3c3c;
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+
+.my_model .title .closeModel {
+	float: right;
+	width: 14px;
+	height: 14px;
+	display: block;
+	cursor: pointer;
+	background: url(../img/icon_car_close.png) no-repeat center center;
+}
+
+.my_model p {
+	line-height: 16px;
+	font-size: 12px;
+}
+
+.my_model .opBtn {
+	margin-top: 20px;
+}
+
+.my_model .opBtn a {
+	width: 58px;
+	height: 28px;
+	font-size: 12px;
+	line-height: 28px;
+	text-align: center;
+	-webkit-border-radius: 1px;
+	-moz-border-radius: 1px;
+	-ms-border-radius: 1px;
+	border-radius: 1px;
+	display: inline-block;
+	margin-right: 10px;
+	font-weight: 700;
+}
+
+.my_model .dialog-sure {
+	background: #52a0e5;
+	color: #fff;
+	border: 1px solid #52a0e5;
+}
+
+.my_model .dialog-close {
+	background: #fff;
+	border: 1px solid #d9d9d9;
+	color: #3c3c3c;
+}
