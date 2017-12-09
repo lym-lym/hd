@@ -80,7 +80,63 @@ $(function(){
 			$("#detailedInfo").html(" ");
 		}
 	})
-	
+	//登录页面的验证
+	$("#l_but").click(function(){
+		var name = $("#l_name").val();
+		var password = $("#l_password").val();
+		if(name=="" && password==""){
+			$("#l_info").html("*请输入用户名 / 密码")
+		}else if(name==""){
+			$("#l_info").html("*请输入用户名 ")
+		}else if(password==""){
+			$("#l_info").html("*请输入密码 ")
+		}
+	});
+	$("#l_name").focus(function(){
+		$("#l_info").html(" ");
+	});
+	$("#l_password").focus(function(){
+		$("#l_info").html(" ");
+	});
+	//注册页面
+		//验证手机号
+	$("#r_tel").blur(function(){
+		var reg = /^1[3|4|5|7|8][0-9]{9}$/; //验证规则
+		var r_tel = $("#r_tel").val();
+		if(r_tel==""){
+			$("#r_tel_info").html("*请输入手机号")
+		}else if(!reg.test(r_tel)){
+			$("#r_tel_info").html("*手机号格式不正确")
+		}else{
+			$("#r_tel_info").hide()
+		}
+	})
+	//两次密码是否一致
+	$("#r_password_q").blur(function(){
+		var r_password = $("#r_password").val();
+		var r_password_q = $("#r_password_q").val();
+		if(r_password != r_password_q){
+			$("#r_passInfo").html("*两次密码不一致");
+		}else{
+			$("#r_passInfo").hide()
+		}
+	})
+	//商品列表页面的 下拉菜单
+	$("#n_sub_nav ul li.title").click(function(){
+		if ($(this).hasClass('on')) {
+			$(this).children(".list").slideUp(); //收起
+			$(this).removeClass("on"); 
+		    $("#n_sub_nav ul li>a span").html("+");
+		}else{
+			 
+			$("#n_sub_nav ul li.title").removeClass("on"); 
+			$("#n_sub_nav ul li.title .list").slideUp();
+			$(this).children(".list").slideDown();//展开
+			$(this).toggleClass("on");
+			 $("#n_sub_nav ul li>a span").html("+");
+			$("#n_sub_nav ul li.on>a span").html("-");
+		}
+	});	
 })
 
    

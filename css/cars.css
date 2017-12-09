@@ -186,6 +186,7 @@ a {
 }
 
 .order_lists .list_amount .amount_box input {
+	outline: none;
 	border: none;
 	height: 28px;
 	width: 70px;
