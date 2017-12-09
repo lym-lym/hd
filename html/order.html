@@ -93,12 +93,106 @@
 			<h2 class="mytitle"><a href="javascript:;">我的红豆</a> > 我的订单</h2>
 			<div class="contant claerfloat">
 				<div class="sideLeft">
-				
+					<div class="title">个人中心</div>
+					<a href="javascript:;" class="active">我的订单</a>
+					<a href="javascript:;">我的退货</a>
+					<a href="javascript:;">个人信息</a>
+					<a href="javascript:;">我的收藏</a>
+					<a href="javascript:;">我的积分</a>
+					<a href="javascript:;">我的额度</a>
+					<a href="javascript:;">我的评价</a>
+					<a href="javascript:;">我的优惠券</a>
+					<a href="javascript:;">积分换卷</a>
+					<a href="javascript:;">重置管理</a>
+					<a href="javascript:;">提现管理</a>
+					<a href="javascript:;">我的余额</a>
+					<div class="title">个人中其他管理心</div>
+					<a href="javascript:;">地址管理</a>
+					<a href="javascript:;">站内信息</a>
+					<a href="javascript:;">举报管理</a>
+				</div>
+				<div class="right">
+					<ul class="title claerfloat">
+						<li class="active"><em class="raw"></em><a href="javascript:;">所有订单</a></li>
+						<li><a href="javascript:;">待存款</a></li>
+						<li><a href="javascript:;">待发货</a></li>
+						<li><a href="javascript:;">待收货</a></li>
+						<li><a href="javascript:;">待评价</a></li>
+						<li><a href="javascript:;">已完成</a></li>
+					</ul>
+					<div class="listTitle claerfloat">
+						<div class="orderNum">
+							<span>订单号：</span><input type="text" />
+						</div>
+						<div class="time">
+							<span>下单时间：</span><input type="text" id="data1"/> - <input type="text" id="data2"/>
+						</div>
+						<div class="goods">
+							<span>商品名称：</span><input type="text" />
+						</div>
+						<div class="status">
+							<span>订单状态：</span>
+							<select name="">
+								<option value="">所有订单</option>
+							</select>
+						</div>
+						<div class="type">
+							<span>订单类型：</span>
+							<select name="">
+								<option value="">所有订单</option>
+							</select>
+						</div>
+						<a href="javascript:;">搜索</a>
+					</div>
+					<div class="listOrder">
+						<div class="info">
+							<span>订单号：HD20171208239875</span>
+							<span>收货人：18392960950</span>
+							<span>2017-12-08 23:22:57</span>
+							<span>普通订单</span>
+						</div>
+						<div class="main">
+							<ul class="claerfloat">
+								<li class="d1 claerfloat">
+									<a href="javascript:;"><img src="../img/pic_car1.jpg"/></a>
+									<div class="text">
+										<a href="javascript:;">DXHTD013S红豆男装简约大方休闲大衣L</a>
+										<span class="cartProColor">颜色:R5酒红色 尺码:165/84A </span>
+									</div>
+								</li>
+								<li class="d2">
+									<p>￥123.00</p><p>(含运费：￥0.0)</p>
+								</li>
+								<li class="d3">
+									<p>财付通</p>
+								</li>
+								<li class="d4">
+									<a href="javascript:;">支付订单</a>
+									<a href="javascript:;">取消订单</a>
+								</li>
+								<li class="d5">
+									<p>订单详情</p>
+								</li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
-			
+			<div class="page">
+				<a href="javascript:;">首页</a>&nbsp;&nbsp;第&nbsp;&nbsp;<span>01</span>&nbsp;&nbsp;页&nbsp;&nbsp;<a href="javascript:;">末页</a>&nbsp;&nbsp;共&nbsp;&nbsp;<i>1</i>&nbsp;&nbsp;页&nbsp;&nbsp;
+				到第&nbsp;&nbsp;<input type="text" value="1"/>&nbsp;&nbsp;页&nbsp;&nbsp;<a href="javascript:;">确定</a>&nbsp;&nbsp;共两条
+			</div>
 		</div>
+	<script src="../laydate/laydate.js" type="text/javascript" charset="utf-8"></script>
 	<script src="../js/m_reset.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript" src="../js/m_web.js" ></script>
+	<script>
+		laydate.render({
+		  elem: '#data1' //指定元素
+		});
+		laydate.render({
+		   elem: '#data2'
+		});
+	</script>
 	</body>
 </html>
