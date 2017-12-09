@@ -2,10 +2,11 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>我的购物车</title>
+		<title>生成订单页</title>
 		<link rel="stylesheet" type="text/css" href="../css/iconfont.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/m_reset.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/m_web.css"/>
+		<script src="../js/jsAddress.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
@@ -89,56 +90,114 @@
 			</div>
 		</div>
 		<!--主体内容-->
-		<div class="c_main_box container">
+		<div class="o_main_box container">
 			<ul class="progress claerfloat">
 				<li class="step1">我的购物车</li>
 				<li class="step2">填写核对订单信息</li>
 				<li class="step3">成功提交订单</li>
 			</ul>
-			<form action="javascript:;" method="post" class="claerfloat">
-				<div class="shopname">
-					<input type="checkbox" id="" name="" value="" checked="checked">
-                    <span>店铺名称：红豆男装旗舰店</span>
-                </div>
-                <div class="shopbody">
-                	<table border="0" cellspacing="0" cellpadding="0">
-                		<tr>
-                			<th width="45%">商品信息</th>
-                			<th width="11%">单价</th>
-                			<th width="18%">数量</th>
-                			<th width="15%">金额</th>
-                			<th width="11%">操作</th>
-                		</tr>
-                		<tr class="aut">
-                			<td width="45%" class="d1">
-                				<input type="checkbox" name="" id="" value="" checked="checked"/>
-                				<a href="javascript:;" class="pic"><img src="../img/pic_car1.jpg"/></a>
-                				<h2><a href="javascript:;">DXHTD019S红豆男装男士韩版简约款大衣L</a></h2>
-                				<p>颜色:B4藏青 尺码:165/84A</p>
-                			</td>
-                			<td width="11%" class="d2">
-                				<p>￥100</p>
-                				<del>797.00</del>
-                			</td>
-                			<td width="18%" class="d3">
-                				<div class="count claerfloat">
-                					<a href="javascript:;" class="reduce">-</a>
-                					<span class="number"></span>
-                					<a href="javascript:;" class="add">+</a>
-                				</div>
-                			</td>
-                			<td width="15%" class="d4">￥100</td>
-                			<td width="11%" class="d5">
-                				<a href="javascript">收藏</a>
-                				<a href="javascript">删除</a>
-                			</td>
-                		</tr>
-                	</table>
-                </div>
-                <div class="todal_box">
-                	商品总价（不含运费）<span class="todal">￥5611</span>
-                </div>
-				<a href="javascript:;" class="pay">去结算</a>
+			<div class="address_box">
+				<h3>填写收货地址</h3>
+				<div class="address claerfloat">
+					<div class="d1">
+						<p class="tel"><span></span>李雅梅 18091595321</p>
+						<p class="place"><span></span>陕西省西安市碑林区</p>
+						<p class="date"><span></span>只周一至周五收货</p>
+						<i></i>
+						<div class="modify">修改</div>
+					</div>
+					<div class="d2" id="bomb_receiptInfo">
+						<i></i>
+						<p>添加地址</p>
+					</div>
+				</div>
+			</div>
+			<div class="goods_info">
+				<ul class="title claerfloat">
+					<li class="list_con">红豆男装旗舰店商品信息</li>
+					<li class="list_price">单价</li>
+					<li class="list_amount">数量</li>
+					<li class="list_sum">小计</li>
+				</ul>
+				<ul class="order_content claerfloat">
+					<li class="list_con claerfloat">
+						<a href="javascript:;"><img src="../img/pic_car1.jpg"/></a>
+						<div class="text">
+							<a href="javascript:;"><h3>DXHTD013S红豆男装简约大方休闲大衣L</h3></a>
+							<span class="cartProColor">颜色:R5酒红色 尺码:165/84A </span>
+						</div>
+					</li>
+					<li class="list_price">
+						<p>￥123.00</p>
+						<del>￥999.00</del>
+					</li>
+					<li class="list_amount">
+						<p>1</p>
+					</li>
+					<li class="list_sum">
+						<p>￥123.00</p>
+					</li>
+				</ul>
+				<div class="orderForm">
+					<div class="invoice">
+						<h4>使用发票：</h4><span>开票抬头</span>
+						<input type="radio" checked="checked"/><i>不开票</i>
+						<input type="radio" /><i>个人</i>
+						<input type="radio"  /><i>公司</i>
+						<input type="text" id="" value="" />
+					</div>
+					<div class="distribution claerfloat">
+						<h4>配送方式：</h4>
+						<input type="radio" checked="checked"/><i>快递包邮</i><br />
+						<input type="radio" /><i>买家自提</i>
+						<span>地址：红豆工业城欧豹大楼三楼（红豆商城）</span>
+					</div>
+					<div class="discount claerfloat">
+						<h4>使用优惠券：</h4>
+						<select name="">
+							<option value="">请选择优惠券</option>
+						</select>
+						<span>有优惠券兑换码？</span>
+						<a href="javascript:;">[点击前往兑换]</a>
+					</div>
+					<div class="message">
+						<h4>订单留言：</h4>
+						<textarea></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="mony">
+				<p>商品总金额(不含运费)： ¥1035.00</p>
+				<p>运费： ¥0.00</p>
+				<p>优惠： -¥0.00</p>
+				<p>您可使用115积分</p>
+				<p>应付金额：<span>¥1035.00</span></p>
+			</div>
+			<div class="btn claerfloat">
+				<a href="car1.html" class="backCar">返回购物车</a>
+				<a href="javascript:;" class="submitOrder">提交订单</a>
+			</div>
+		</div>
+		<!--收货信息弹窗-->
+		<div class="receiptInfo_bg"></div>
+		<div class="receiptInfo">
+			<form action="javascript:;" method="post">
+				<h1>收货信息<span id="close">X</span></h1>
+				<input autocomplete="off" type="text" name="" id="username" value="" placeholder="收货人姓名"  onfocus="placeholder=''"  onblur="if (this.placeholder == '') {this.placeholder = '收货人姓名';}"/>
+				<strong id="usernameInfo"></strong>
+				<input type="text" name="" id="usertel" value="" placeholder="手机号码"  onfocus="placeholder=''"  onblur="if (this.placeholder == '') {this.placeholder = '手机号码';}"/>
+				<strong id="usertelInfo"></strong>
+				<input type="text" name="" id="usertel2" value="" placeholder="备用联系电话(手机号二选一)"  onfocus="placeholder=''"  onblur="if (this.placeholder == '') {this.placeholder = '备用联系电话(手机号二选一)';}"/>
+				<strong></strong>
+				<select id="cmbProvince"></select>
+				<select id="cmbCity"></select>
+				<select id="cmbArea"></select>
+				<script type="text/javascript">
+					addressInit('cmbProvince', 'cmbCity', 'cmbArea');
+				</script>
+				<textarea id="detailed" placeholder="详细地址(必填)"  onfocus="placeholder=''"  onblur="if (this.placeholder == '') {this.placeholder = '详细地址(必填)';}"></textarea>
+				<strong id="detailedInfo"></strong>
+				<a href="javascript:;" class="save">保存</a><a href="javascript:;" class="cancel">取消</a>
 			</form>
 		</div>
 		<!--底部-->
@@ -208,6 +267,7 @@
 			<a href="javascript:;" class="tel">洽谈通<img src="../img/icon_foot_tel.gif"/> </a>
 			<a href="#header" class="back_top"><i class="iconfont icon-fanhuidingbu"></i>返回顶部</a>
 		</div>
+		
 		<script src="../js/m_reset.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript" src="../js/m_web.js" ></script>
 	</body>

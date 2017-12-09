@@ -25,6 +25,62 @@ $(function(){
 		$(this).children("a").css({"background":"#fff","color":"#000"})
 		$(this).children("dl").css("display","none");
 	})
+	
+	//生成订单页面 
+	//出现修改按钮
+	$(".d1").mouseenter(function(){
+		$(".modify").css("display","block")
+	})
+	$(".d1").mouseleave(function(){
+		$(".modify").css("display","none")
+	})
+	//弹框
+	$("#bomb_receiptInfo").click(function(){
+		$(".receiptInfo_bg").css("display","block");
+		$(".receiptInfo").css("display","block");
+	})
+	$(".modify").click(function(){
+		$(".receiptInfo_bg").css("display","block");
+		$(".receiptInfo").css("display","block");
+	})
+	//隐藏弹框
+	$(".cancel").click(function(){
+		$(".receiptInfo_bg").css("display","none");
+		$(".receiptInfo").css("display","none");
+	})
+	$("#close").click(function(){
+		$(".receiptInfo_bg").css("display","none");
+		$(".receiptInfo").css("display","none");
+	})
+	//弹出框验证
+	$(".save").click(function(){
+		var username = $("#username").val();
+		var usertel = $("#usertel").val();
+		var detailed = $("#detailed").val();
+		if(username==""){
+			$("#usernameInfo").html("*收货人姓名不能为空");
+		}else if(usertel==""){
+			$("#usertelInfo").html("*电话不能为空");
+		}else if(detailed==""){
+			$("#detailedInfo").html("*详细地址不能为空");
+		}
+	})
+	$("#username").blur(function(){
+		if($("#username").val()!=""){
+			$("#usernameInfo").html(" ");
+		}
+	})
+	$("#usertel").blur(function(){
+		if($("#usertel").val()!=""){
+			$("#usertelInfo").html(" ");
+		}
+	})
+	$("#detailed").blur(function(){
+		if($("#detailed").val()!=""){
+			$("#detailedInfo").html(" ");
+		}
+	})
+	
 })
 
    
