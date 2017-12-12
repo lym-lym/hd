@@ -24,7 +24,7 @@ $(function(){
 		$(this).children("dl").css("display","none");
 	})
 	
-	//生成订单页面 
+	//car2
 	//出现修改按钮
 	$(".d1").mouseenter(function(){
 		$(".modify").css("display","block")
@@ -69,10 +69,17 @@ $(function(){
 		}
 	})
 	$("#usertel").blur(function(){
-		if($("#usertel").val()!=""){
-			$("#usertelInfo").html(" ");
+		var reg = /^1[3|4|5|7|8][0-9]{9}$/; //验证规则
+		var r_tel = $("#usertel").val();
+		if(r_tel==""){
+			$("#usertelInfo").html("*请输入手机号")
+		}else if(!reg.test(r_tel)){
+			$("#usertelInfo").html("*手机号格式不正确")
+		}else{
+			$("#usertelInfo").html(" ")
 		}
 	})
+	
 	$("#detailed").blur(function(){
 		if($("#detailed").val()!=""){
 			$("#detailedInfo").html(" ");
@@ -140,9 +147,12 @@ $(function(){
 	$(".summary_pic_l").slide({mainCell:".bd ul", effect:"topLoop", vis:3,scroll:1, delayTime:800,trigger:"click"});
 	//点击左侧缩略图，出现右侧中型图片
 	var casepic="<img src=\"../img/pic_d_case1.jpg\" />";
+	var big_view="<img src=\"../img/pic_d_big1.jpg\" />";
 	$(".casepic").html(casepic);
+	$(".big_view").html(big_view);
 	$(".pic").click(function(){
 		$(".casepic").html($(this).find(".hidden1").html());
+		$(".big_view").html($(this).find(".hidden2").html());
 		$(".lay_box").fadeIn(300)
 	});
 	$("li").click(function(){
@@ -150,70 +160,38 @@ $(function(){
 		$(this).siblings().children("img").removeClass("borderColor");
 	})
 	
-	//出现大图
-	$(".big_view").html($(".casepic").html());
+//数量加减
+	var t = $("#text_box");  
+	//初始化数量为1,并失效减  
+	$('#min').attr('disabled',true);  
+	    //数量增加操作  
+	    $("#add").click(function(){ 
+	    	if(t.val()<10){
+	    		 t.val(parseInt(t.val())+1);  
+	    	}
+	       
+			$("#min").removeAttr("disabled");   
+	    })   
+	    //数量减少操作  
+	    $("#min").click(function(){  
+	    	if(parseInt(t.val())>1){
+	    		t.val(parseInt(t.val())-1)
+	    	}else{
+	    		$("#min").attr("disabled","disabled")
+	    	}
+	    }) 
 	
-	
-	//放大镜效果
-	function Zoom(summary_pic, hoverbox, l, t, x, y, h_w, h_h, big_view) {
-	    var moveX = x - l - (h_w / 2);
-	    //鼠标区域距离
-	    var moveY = y - t - (h_h / 2);
-	    //鼠标区域距离
-	    if (moveX < 0) {
-	        moveX = 0
-	    }
-	    if (moveY < 0) {
-	        moveY = 0
-	    }
-	    if (moveX > summary_pic.width() - h_w) {
-	        moveX = summary_pic.width() - h_w
-	    }
-	    if (moveY > summary_pic.height() - h_h) {
-	        moveY = summary_pic.height() - h_h
-	    }
-	    //判断鼠标使其不跑出图片框
-	    var zoomX = big_view.width() / summary_pic.width()
-	    //求图片比例
-	    var zoomY = big_view.height() / summary_pic.height()
-	
-	    big_view.css({
-	        left: -(moveX * zoomX),
-	        top: -(moveY * zoomY)
-	    })
-	    hoverbox.css({
-	        left: moveX,
-	        top: moveY
-	    })
-	}
-	function Zoomhover(summary_pic, hoverbox, big_view) {
-	    var l = summary_pic.offset().left;
-	    var t = summary_pic.offset().top;
-	    var w = hoverbox.width();
-	    var h = hoverbox.height();
-	    var time;
-	    $(".casepic img,.hoverbox").mouseover(function(e) {
-	        var x = e.pageX;
-	        var y = e.pageY;
-	        $(".hoverbox,.big_view").show();
-	        hoverbox.css("opacity", "0.3")
-	        time = setTimeout(function() {
-	            Zoom(summary_pic, hoverbox, l, t, x, y, w, h, big_view)
-	        }, 1)
-	    }).mousemove(function(e) {
-	        var x = e.pageX;
-	        var y = e.pageY;
-	        time = setTimeout(function() {
-	            Zoom(summary_pic, hoverbox, l, t, x, y, w, h, big_view)
-	        }, 1)
-	    }).mouseout(function() {
-	        big_view.parent().hide()
-	        hoverbox.hide();
-	    })
-	}
-	$(function() {
-	    Zoomhover($(".casepic img"), $(".hoverbox"), $(".big_view img"));
+	$(".share").click(function(){
+		$(".weixin_qrcode").css("display","block");
 	})
+	$(".weixin_close").click(function(){
+		$(".weixin_qrcode").css("display","none");
+	})
+	
+	//
+	$("#switch_sizeicon a").click(function(){
+		$(this).addClass("on").siblings().removeClass("on");
+	});
 })
 
    
