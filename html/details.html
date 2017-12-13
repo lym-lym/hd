@@ -22,11 +22,11 @@
 					</div>
 					<div class="r">
 						<a href="javascript:;" class="vip">会员中心</a>
-						<a href="car1.html" class="car">0
+						<a href="car1.html" target="_blank" class="car">0
 							<i class="iconfont icon-cart"></i>
 						</a>
-						<a href="login.html" class="login">登录</a>/
-						<a href="register.html" class="reg">注册</a>
+						<a href="login.html"  target="_blank"class="login">登录</a>/
+						<a href="register.html" target="_blank" class="reg">注册</a>
 					</div>
 				</div>
 				<!--logo-->
@@ -347,15 +347,21 @@
 		</div>
 		<script src="../js/m_reset.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript" src="../js/m_web.js" ></script>
+		<script src="../js/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/fangdajing.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
-			$(function() {
-			    Zoomhover($(".casepic img"), $(".hoverbox"), $(".big_view img"));
-			})
-		</script>
-		<script src="../js/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript">
 				$('.add-to-cart').on('click', function () {
+					//添加cookie
+		           let arr=[];
+					arr.push({
+						name:'DXHUY011S红豆男装时尚休闲韩版潮流羽绒服L',
+						count:2,
+						danjia:499.00,
+						imgurl:'../img/pic_car1.jpg'
+					})
+					document.cookie="shop="+JSON.stringify(arr);
+					//console.log(JSON.stringify(arr));
+					//添加购物车抛物线
 					var cart = $('#l_car');
 					var imgtodrag = $(".casepic").find('img').eq(0);
 					if (imgtodrag) {

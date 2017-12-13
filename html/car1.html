@@ -26,8 +26,8 @@
 						<a href="car1.html" class="car">0
 							<i class="iconfont icon-cart"></i>
 						</a>
-						<a href="login.html" class="login">登录</a>/
-						<a href="register.html" class="reg">注册</a>
+						<a href="login.html" target="_blank" class="login">登录</a>/
+						<a href="register.html" target="_blank" class="reg">注册</a>
 					</div>
 				</div>
 				<!--logo-->
@@ -128,22 +128,22 @@
 								<input type="checkbox" id="checkbox_4" class="son_check">
 							</li>
 							<li class="list_con">
-								<div class="list_img"><a href="javascript:;"><img src="../img/pic_car1.png" alt=""></a></div>
-								<div class="list_text"><a href="javascript:;">夏季男士迷彩无袖T恤圆领潮流韩版修身男装背心青年时尚打底衫男</a></div>
+								<div class="list_img"><a href="javascript:;"><img id="buycarImg" src="" alt=""></a></div>
+								<div class="list_text"><a id="buycarname" href="javascript:;"></a></div>
 							</li>
 							<li class="list_price">
-								<p class="price">￥980</p>
+								<p class="price" id="buycardanjia">￥</p>
 								<del>￥1980</del>
 							</li>
 							<li class="list_amount">
 								<div class="amount_box claerfloat">
 									<a href="javascript:;" class="reduce reSty">-</a>
-									<input type="text" value="1" class="sum">
+									<input type="text" value="" class="sum" id="byecarCount">
 									<a href="javascript:;" class="plus">+</a>
 								</div>
 							</li>
 							<li class="list_sum">
-								<p class="sum_price">￥1980</p>
+								<p class="sum_price" id="buycarjine"></p>
 							</li>
 							<li class="list_op">
 								<p class="del"><a href="javascript:;" class="delBtn">删除</a></p>
@@ -151,6 +151,14 @@
 							</li>
 						</ul>
 					</div>
+					<script type="text/javascript">
+						var data=JSON.parse(document.cookie.split('=')[1])[0];
+							$('#buycarname').html(data.name);
+							$('#buycarImg').attr("src",data.imgurl);
+							$('#buycardanjia').html(data.danjia);
+							$('#byecarCount').val(data.count);
+							$('#buycarjine').html("￥"+data.danjia*data.count);
+					</script>
 				</div>
 				
 				<div class="cartBox">

@@ -128,9 +128,15 @@ a {
 	float: left;
 }
 
-.order_lists .list_con .list_img img {
-	width: 100%;
-	vertical-align: top;
+.order_lists .list_con .list_img a img {
+	display: block;
+	width: 90px;
+	height: 90px;
+}
+#buycarImg{
+	display: block;
+	width: 90px;
+	height: 90px;
 }
 
 .order_lists .list_con .list_text {

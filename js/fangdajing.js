@@ -3,20 +3,19 @@
 	    var moveX = x - l - (h_w / 2);
 	    //鼠标区域距离
 	    var moveY = y - t - (h_h / 2);
-	    //鼠标区域距离
 	    if (moveX < 0) {
 	        moveX = 0
 	    }
 	    if (moveY < 0) {
 	        moveY = 0
 	    }
+	     //判断鼠标使其不跑出图片框
 	    if (moveX > summary_pic.width() - h_w) {
 	        moveX = summary_pic.width() - h_w
 	    }
 	    if (moveY > summary_pic.height() - h_h) {
 	        moveY = summary_pic.height() - h_h
 	    }
-	    //判断鼠标使其不跑出图片框
 	    var zoomX = big_view.width() / summary_pic.width()
 	    //求图片比例
 	    var zoomY = big_view.height() / summary_pic.height()
@@ -36,23 +35,25 @@
 	    var w = hoverbox.width();
 	    var h = hoverbox.height();
 	    var time;
-	    $(".casepic img,.hoverbox").mouseover(function(e) {
+	    $(".casepic,.hoverbox").mouseover(function(e) {
 	        var x = e.pageX;
 	        var y = e.pageY;
-	        $(".hoverbox,.big_view").show();
-	        hoverbox.css("opacity", "0.3")
+	        $(".hoverbox,.big_view img,.big_view").show();
 	        time = setTimeout(function() {
 	            Zoom(summary_pic, hoverbox, l, t, x, y, w, h, big_view)
 	        }, 1)
 	    }).mousemove(function(e) {
-	        var x = e.pageX;
-	        var y = e.pageY;
+	    	
+	        var x = e.pageX;//鼠标指针，相对于文档的左边缘。
+	        var y = e.pageY;//鼠标指针，相对于文档的上边缘。
 	        time = setTimeout(function() {
 	            Zoom(summary_pic, hoverbox, l, t, x, y, w, h, big_view)
 	        }, 1)
 	    }).mouseout(function() {
-	        big_view.parent().hide()
+	    	 $(".hoverbox,.big_view img,.big_view").hide();
 	        hoverbox.hide();
 	    })
 	}
-	
+$(function() {
+    Zoomhover($(".casepic"), $(".hoverbox"), $(".big_view img"));
+})
