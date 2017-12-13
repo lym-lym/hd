@@ -17,3 +17,11 @@ iframe{border: none;}
 .claerfloat{zoom: 1;
     &:after{display: block;clear: both;content: "";visibility: hidden;height: 0;/*解决IE6下有高度的问题*/}
 }
+
+//去掉input自动充填黄色
+input:-webkit-autofill,textarea:-webkit-autofill,select:-webkit-autofill{ 
+    -webkit-box-shadow: 0 0 0 1000px white inset; 
+}
+input[type=text]:focus, input[type=password]:focus, textarea:focus{
+    -webkit-box-shadow: 0 0 0 1000px white inset; 
+}

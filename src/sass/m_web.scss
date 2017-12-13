@@ -1,4 +1,34 @@
 $color:#e60012;
+.fixed_topbar{background: #fff; width: 100%;height: 54px;box-shadow: 0 0 5px #888;position: fixed;top: -100px;right: 0;z-index: 9999;
+    .container{position: relative;
+        //搜索框
+        .search_box{position: absolute;right: 0;top: 12px;
+        .form_box{position: relative;
+            .search_res{display: none; position: absolute;right: 22px;top: 27px;width: 175px;height: 200px;border: 1px solid #ccc;overflow: hidden;
+                z-index: 1999;background: #fff;
+                li a{display: block; line-height: 25px;font-size: 12px;color: #333333;text-align: left;text-indent: 10px;
+                    &:hover{background: #ccc;}
+                }
+            }
+        }
+            form{position: relative;
+                input[type='text']{outline: none;border: none;border-bottom: 1px solid #000;width: 132px;padding: 5px 0;
+                    transition: all 1s;margin-right: 23px;
+                }
+                input::-webkit-input-placeholder{color: #666;display: block;padding-left: 105px;
+                }
+                input[type='submit']{outline: none;border: none;position: absolute;top: 6px;right: 0;cursor: pointer;
+                    background: url(../img/icon_search.png)no-repeat 0px 0px;width: 19px;height: 23px;
+                }
+            }
+        }
+    
+    }
+    .topbar_logo{float: left;
+        img{height: 50px;}
+    }
+    &.m_fix{top: 0;transition: all 1s; }
+}
 .container{width: 950px;margin: 0 auto;}
 .header{width: 100%;
     .top_bar{height: 30px;border-bottom: 1px solid #ccc;margin-top: 5px;
@@ -31,6 +61,14 @@ $color:#e60012;
         }
         //搜索框
         .search_box{position: absolute;right: 0;top: 50px;
+        .form_box{position: relative;
+            .search_res{display: none; position: absolute;right: 22px;top: 27px;width: 175px;height: 200px;border: 1px solid #ccc;overflow: hidden;
+                z-index: 1999;background: #fff;
+                li a{display: block; line-height: 25px;font-size: 12px;color: #333333;text-align: left;text-indent: 10px;
+                    &:hover{background: #ccc;}
+                }
+            }
+        }
             form{position: relative;
                 input[type='text']{outline: none;border: none;border-bottom: 1px solid #000;width: 132px;padding: 5px 0;
                     transition: all 1s;margin-right: 23px;
@@ -128,12 +166,12 @@ $color:#e60012;
         .container{margin-top: 20px;
         ul{margin: 0 auto;}
             li{float: left;margin-right: 5px;
-                img{width: 182px;display: block;overflow: hidden;}
+                img{width: 185px;display: block;overflow: hidden;}
             }
         }
         
     }
-    .f3{border-top: 1px solid #cccccc;
+    .f3{border-top: 1px solid #cccccc;margin-top: 60px;
         .title{text-align: center;margin-top: 70px;}
         .contant{height: 550px;width: 100%;background: url(../img/bg_f3.jpg) no-repeat center top;position: relative;margin-top: 20px;
             a{display: block;height: 550px;}
@@ -229,7 +267,9 @@ $color:#e60012;
         }
         a{font-size: 12px;color: #666;display: block;padding-left: 243px;}
         input{outline: none;border: 1px solid #595959;width: 200px;height: 26px;padding-left: 10px;}
-        input[type="text"]{}
+        input[type="text"]{
+            
+        }
         input[type="password"]{}
         input[type="submit"]{margin-top: 10px; margin-left: 80px; width: 68px;height: 32px;background: #000;color: #fff;text-align: center;border: 0;}
     }
@@ -241,7 +281,7 @@ $color:#e60012;
 }
 //注册页面
 .r_main_box{margin-top: 40px;background: url(../img/bg_reg.jpg) no-repeat center top;min-height: 525px;
-    form{width: 475px;float: right;margin-top: 60px;
+    form{width: 520px;float: right;margin-top: 60px;
         h2{color: #000;font-size: 18px;font-weight: bold;margin-bottom: 20px;}
         label{display: block;line-height: 35px;
             span{width: 82px;text-align: right;display: inline-block;margin-right: 5px;font-size: 14px;}
@@ -588,13 +628,13 @@ $color:#e60012;
             }
             .lay_box{float: left;margin-left: 30px;width: 350px;height: 551px;overflow: hidden;position: relative;
                 .hoverbox{display: none; position:absolute;top:0;background:#000;border:1px solid #fff;height:241px;width:217px;cursor:move;z-index:10;opacity: .2;}
-                .casepic{height: 551px;overflow: hidden;
-                    img{height: 551px;display: block;}
+                .casepic{height: 526px;overflow: hidden;
+                    img{display: block;}
                 }
             }
             .big_view{z-index: 99; display: none; width: 455px;height: 551px;border: 1px solid #959595;box-sizing: border-box;overflow: hidden;
                 position: absolute;top: 0;left: 490px;overflow: hidden;
-                img{width: 750px;height: 1200px;position: absolute;}
+                img{width: 750px;height: 1200px;position: absolute;display: block;}
             }
         }
         .summary_info{float: right;width: 435px;
@@ -740,7 +780,6 @@ $color:#e60012;
                 :nth-child(1) label span{background: url(../img/pic_c3_alipay.jpg) no-repeat;}
                 :nth-child(2) label span{background: url(../img/pic_c3_tenpay.jpg) no-repeat;}
             }
-           
         }
         .pay{display: block;color: #fff;margin: 20px 0 0;padding: 5px 40px;text-align: center;font-weight: bold;font-size: 18px;
             background: #231815;width: 72px;height: 30px;line-height: 30px;

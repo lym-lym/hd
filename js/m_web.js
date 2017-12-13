@@ -11,8 +11,18 @@ $(function(){
 		var myTimer = setTimeout(function(){
 			$("#text").attr('placeholder',"搜索");
 		},600)
-		
+		$(".search_res").css("display","none");
 	})
+	//跨域
+	$('#text').bind('input', function () {
+		$(".search_res").css("display","block");
+		var search_text = $("#text").val();
+		$.getJSON("https://suggest.taobao.com/sug?code=utf-8&q="+search_text+"&_ksTS=1513150265740_480&callback=?&area=c2c&bucketid=2",function(data){
+			data.result.forEach((v)=>{
+				 $('<li><a href="javascript">'+v[0]+'</a></li>').appendTo($("#uls"));  
+			})
+		});
+	});
 	
 	//nav
 	$(".nav li").mouseenter(function(){
@@ -95,7 +105,27 @@ $(function(){
 			$("#l_info").html("*请输入用户名 ")
 		}else if(password==""){
 			$("#l_info").html("*请输入密码 ")
+		}else if(name!="" && password!=""){
+			$.ajax({
+				type:"post",
+				url:"../php/login.php",
+				async:true,
+				data :{
+					username : name,
+					userpass : password
+				},
+				success :function(data){
+					data = JSON.parse(data);
+					if(data.status === 200){
+						location.href = "../index.html"
+					}else if(data.status === 401){
+						$("#l_info").html(data.info)
+					}
+				}
+			});
 		}
+		
+		
 	});
 	$("#l_name").focus(function(){
 		$("#l_info").html(" ");
@@ -112,10 +142,30 @@ $(function(){
 			$("#r_tel_info").html("*请输入手机号")
 		}else if(!reg.test(r_tel)){
 			$("#r_tel_info").html("*手机号格式不正确")
+		}else if(r_tel != ""){
+			$.ajax({
+				type:"get",
+				url:"../php/register.php",
+				async:true,
+				data:"userId="+this.value,
+				success:function(data){
+					data = JSON.parse(data);
+					if(data.status === 200){
+						$("#r_tel_info").html(data.info);
+					}else if(data.status === 401){
+						$("#r_tel_info").html(data.info)
+					}
+				}
+			});
 		}else{
-			$("#r_tel_info").hide()
+			$("#r_tel_info").html(" ")
 		}
 	})
+	
+	$("#r_tel").blur(function(){
+		
+	});
+	
 	//两次密码是否一致
 	$("#r_password_q").blur(function(){
 		var r_password = $("#r_password").val();
@@ -154,6 +204,7 @@ $(function(){
 		$(".casepic").html($(this).find(".hidden1").html());
 		$(".big_view").html($(this).find(".hidden2").html());
 		$(".lay_box").fadeIn(300)
+		Zoomhover($(".casepic"), $(".hoverbox"), $(".big_view img"));
 	});
 	$("li").click(function(){
 		$(this).children("img").addClass("borderColor");
