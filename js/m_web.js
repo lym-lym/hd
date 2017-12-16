@@ -105,7 +105,7 @@ $(function(){
 			$("#l_info").html("*请输入用户名 ")
 		}else if(password==""){
 			$("#l_info").html("*请输入密码 ")
-		}else if(name!="" && password!=""){
+		}else if(name!=" " && password!=" "){
 			$.ajax({
 				type:"post",
 				url:"../php/login.php",
